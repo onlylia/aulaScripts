@@ -17,6 +17,5 @@ def funcao_request(_resp, _req, nome):
 
 @login_not_required
 @no_csrf
-def funcao(_resp, _req, nome):
-    nome = _req.get('nome')
-    _resp.write('%s'%(nome))
+def funcao(_resp, nome, sobrenome = 'Santos'):
+    _resp.write('%s %s'%(nome, sobrenome))
