@@ -1,0 +1,33 @@
+{% extends 'bebidas/base.html' %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{% trans %} Bebidas {% endtrans %}  </h1>
+                {% if _logged_user and ('ADMIN' in _logged_user.groups) %}
+                <a href="{{ admin_path }}" class="btn btn-success">{% trans %}Admin{% endtrans %}</a>
+                {% endif %}
+                <hr/>
+                <h2>{% trans %}Bebidas Alcoolicas{% endtrans %}</h2>
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th>{% trans %}Código{% endtrans %}</th>
+                        <th>{% trans %}Nome{% endtrans %}</th>
+                        <th>{% trans %}Preço Unitário (R$){% endtrans %}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for bebida_alcoolica in bebida_alcoolicas %}
+                        <tr>
+                            <td>{{ bebida_alcoolica.codigo }}</td>
+                            <td>{{ bebida_alcoolica.nome }}</td>
+                            <td>{{ bebida_alcoolica.precouni }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
