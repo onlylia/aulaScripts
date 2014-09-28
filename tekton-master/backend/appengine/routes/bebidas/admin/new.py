@@ -13,13 +13,13 @@ def index():
     return TemplateResponse({'save_path': router.to_path(save)},'bebidas/admin/form.html')
 
 
-def save(_handler, bebida_alcoolica_id=None, **bebida_alcoolica_properties):
-    cmd = facade.save_bebida_alcoolica_cmd(**bebida_alcoolica_properties)
+def save(_handler, bebida_id=None, **bebida_properties):
+    cmd = facade.save_bebida_cmd(**bebida_properties)
     try:
         cmd()
     except CommandExecutionException:
         context = {'errors': cmd.errors,
-                   'bebida_alcoolica': cmd.form}
+                   'bebida': cmd.form}
 
         return TemplateResponse(context, 'bebidas/admin/form.html')
     _handler.redirect(router.to_path(admin))

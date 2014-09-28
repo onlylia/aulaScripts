@@ -1,0 +1,60 @@
+{% extends 'base/base.html' %}
+{% block body %}
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Escolha um Tipo de Bebida</h1>
+
+                 <div class="container">
+	                <div class="row clearfix">
+
+		                <div class="col-md-4 column">
+		                </div>
+
+		                <div class="col-md-4 column">
+			                <table class="table">
+
+				                <thead>
+					                <tr>
+						                <th>
+
+						                </th>
+						                <th>
+							                Tipos
+						                </th>
+					                </tr>
+				                </thead>
+
+                                <tbody>
+                                {% for tipo in bebida_tipos %}
+					                <tr>
+						                <td>
+							                 <img src="{{ tipo.endImagem }}" width="LARGURApx" height="ALTURApx"> </img>
+						                </td>
+						                <td>
+                                            <a href="  " class="btn btn-primary">{{ tipo.descricao }}</a>
+						                </td>
+					                </tr>
+                                {% endfor %}
+				                </tbody>
+
+			                </table>
+		                </div>
+
+                        <div class="col-md-4 column">
+		                </div>
+	                </div>
+                </div>
+
+
+
+              <!--
+                {% for cat in categorias %}
+                    <a href="{{ cat.exibir_path }}" class="btn btn-primary">
+                        {{ cat.nome }}</a>
+                {% endfor %}
+              -->
+            </div>
+        </div>
+    </div>
+{% endblock %}

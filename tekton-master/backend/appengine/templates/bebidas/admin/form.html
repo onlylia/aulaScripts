@@ -1,6 +1,6 @@
 {% extends 'bebidas/base.html' %}
 {% block body %}
-    {% set bebida_alcoolica=bebida_alcoolica or None %}
+    {% set bebida=bebida or None %}
     {% set errors=errors or None %}
     <div class="container">
         <div class="row">
@@ -8,13 +8,13 @@
                 <br/>
 
                 <div class="well">
-                    <h1 class="text-center">{% trans %}BebidaAlcoolica Form{% endtrans %}</h1>
+                    <h1 class="text-center">{% trans %}Bebida Form{% endtrans %}</h1>
 
                     <form action="{{ save_path }}" method="post" role="form">
                         {{ csrf_input() }}
-                        {{ form_input(_('Codigo'),'codigo',bebida_alcoolica.codigo,errors.codigo) }}
-                        {{ form_input(_('Precouni'),'precouni',bebida_alcoolica.precouni,errors.precouni) }}
-                        {{ form_input(_('Nome'),'nome',bebida_alcoolica.nome,errors.nome) }}
+                        {{ form_input(_('Preco'),'preco',bebida.preco,errors.preco) }}
+                        {{ form_input(_('EndImagem'),'endImagem',bebida.endImagem,errors.endImagem) }}
+                        {{ form_input(_('Nome'),'nome',bebida.nome,errors.nome) }}
                         <button type="submit" class="btn btn-success">{% trans %}Save{% endtrans %}</button>
                     </form>
                 </div>

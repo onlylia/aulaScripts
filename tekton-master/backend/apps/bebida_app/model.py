@@ -5,8 +5,8 @@ from gaegraph.model import Node
 from gaeforms.ndb import property
 
 
-class BebidaAlcoolica(Node):
-    codigo = ndb.StringProperty(required=True)
+class Bebida(Node):
     nome = ndb.StringProperty(required=True)
-    precouni = ndb.FloatProperty(required=True)
+    preco = property.SimpleCurrency(required=True)
+    endImagem = ndb.StringProperty(required=True)
 

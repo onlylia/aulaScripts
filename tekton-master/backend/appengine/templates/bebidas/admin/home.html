@@ -4,32 +4,32 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>{% trans %}This is a generic home for bebida_app {% endtrans %}  </h1>
-                <a href="{{ new_path }}" class="btn btn-success">{% trans %}Create New BebidaAlcoolica{% endtrans %}</a>
+                <a href="{{ new_path }}" class="btn btn-success">{% trans %}Create New Bebida{% endtrans %}</a>
                 <hr/>
-                <h2>{% trans %}List of BebidaAlcoolicas{% endtrans %}</h2>
+                <h2>{% trans %}List of Bebidas{% endtrans %}</h2>
                 <table class="table table-striped table-hover">
                     <thead>
                     <tr>
                         <th/>
                         <th>{% trans %}Id{% endtrans %}</th>
                         <th>{% trans %}Creation{% endtrans %}</th>
-                        <th>{% trans %}Codigo{% endtrans %}</th>
-                        <th>{% trans %}Precouni{% endtrans %}</th>
+                        <th>{% trans %}Preco{% endtrans %}</th>
+                        <th>{% trans %}EndImagem{% endtrans %}</th>
                         <th>{% trans %}Nome{% endtrans %}</th>
                     </tr>
                     </thead>
                     <tbody>
-                    {% for bebida_alcoolica in bebida_alcoolicas %}
+                    {% for bebida in bebidas %}
                         <tr>
-                            <td><a href="{{ bebida_alcoolica.edit_path }}" class="btn btn-success btn-sm"><i
+                            <td><a href="{{ bebida.edit_path }}" class="btn btn-success btn-sm"><i
                                     class="glyphicon glyphicon-pencil"></i></a></td>
-                            <td>{{ bebida_alcoolica.id }}</td>
-                            <td>{{ bebida_alcoolica.creation }}</td>
-                            <td>{{ bebida_alcoolica.codigo }}</td>
-                            <td>{{ bebida_alcoolica.precouni }}</td>
-                            <td>{{ bebida_alcoolica.nome }}</td>
+                            <td>{{ bebida.id }}</td>
+                            <td>{{ bebida.creation }}</td>
+                            <td>{{ bebida.preco }}</td>
+                            <td>{{ bebida.endImagem }}</td>
+                            <td>{{ bebida.nome }}</td>
                             <td>
-                                <form action="{{ bebida_alcoolica.delete_path }}" method="post" onsubmit="return confirm('{{_('Are you sure to delete? Press cancel to avoid deletion.')}}');">
+                                <form action="{{ bebida.delete_path }}" method="post" onsubmit="return confirm('{{_('Are you sure to delete? Press cancel to avoid deletion.')}}');">
                                     {{ csrf_input() }}
                                     <button class="btn btn-danger btn-sm"><i
                                             class="glyphicon glyphicon-trash"></i></button>

@@ -11,10 +11,10 @@ from routes.bebidas import admin
 @login_not_required
 @no_csrf
 def index():
-    cmd = facade.list_bebida_alcoolicas_cmd()
-    bebida_alcoolicas = cmd()
-    public_form = facade.bebida_alcoolica_public_form()
-    bebida_alcoolica_public_dcts = [public_form.fill_with_model(bebida_alcoolica) for bebida_alcoolica in bebida_alcoolicas]
-    context = {'bebida_alcoolicas': bebida_alcoolica_public_dcts,'admin_path':router.to_path(admin)}
+    cmd = facade.list_bebidas_cmd()
+    bebidas = cmd()
+    public_form = facade.bebida_public_form()
+    bebida_public_dcts = [public_form.fill_with_model(bebida) for bebida in bebidas]
+    context = {'bebidas': bebida_public_dcts,'admin_path':router.to_path(admin)}
     return TemplateResponse(context)
 

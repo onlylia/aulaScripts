@@ -9,20 +9,20 @@ from routes.bebidas import admin
 
 
 @no_csrf
-def index(bebida_alcoolica_id):
-    bebida_alcoolica = facade.get_bebida_alcoolica_cmd(bebida_alcoolica_id)()
-    detail_form = facade.bebida_alcoolica_detail_form()
-    context = {'save_path': router.to_path(save, bebida_alcoolica_id), 'bebida_alcoolica': detail_form.fill_with_model(bebida_alcoolica)}
+def index(bebida_id):
+    bebida = facade.get_bebida_cmd(bebida_id)()
+    detail_form = facade.bebida_detail_form()
+    context = {'save_path': router.to_path(save, bebida_id), 'bebida': detail_form.fill_with_model(bebida)}
     return TemplateResponse(context, 'bebidas/admin/form.html')
 
 
-def save(_handler, bebida_alcoolica_id, **bebida_alcoolica_properties):
-    cmd = facade.update_bebida_alcoolica_cmd(bebida_alcoolica_id, **bebida_alcoolica_properties)
+def save(_handler, bebida_id, **bebida_properties):
+    cmd = facade.update_bebida_cmd(bebida_id, **bebida_properties)
     try:
         cmd()
     except CommandExecutionException:
         context = {'errors': cmd.errors,
-                   'bebida_alcoolica': cmd.form}
+                   'bebida': cmd.form}
 
         return TemplateResponse(context, 'bebidas/admin/form.html')
     _handler.redirect(router.to_path(admin))
