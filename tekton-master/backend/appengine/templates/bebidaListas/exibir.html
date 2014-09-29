@@ -7,7 +7,7 @@
 
                 <ol>
                     {% for beb in lista_de_bebidas %}
-                        <li>{{ beb.nome }} - <strong> Preço: </strong> {{beb.preco }}</li>
+                        <li>{{ beb.nome }} - <strong> Preço: </strong> {{ beb.price }}</li>
                     {% endfor %}
                 </ol>
 
@@ -20,7 +20,7 @@
                         {{ csrf_input() }}
                         <input type="hidden" name="tipo_id" value="{{ bebida_tipo.key.id() }}"/>
                         {{ form_input('Nome','nome',bebida.nome,erros.nome) }}
-                        {{ form_input('Preço','preço',bebida.preco,erros.preco) }}
+                        {{ form_input('Preco','preco',bebida.price,erros.price) }}
                         {{ form_input('Endereço da imagem','endereço',bebida.endImg,erros.endImg) }}
                         <button type="submit" class="btn bg-primary">Salvar</button>
                     </form>

@@ -30,16 +30,16 @@ def exibir(bebida_tipo_id):
 
 
 @login_not_required
-def salvar_bebida(bebida_tipo_id, nome, endImg, preco):
+def salvar_bebida(bebida_tipo_id, nome, endImg, price):
     tipo_chave = ndb.Key(BebidaTipo, int(bebida_tipo_id))
-    bebida = Bebida(nome=nome, endImg=endImg, preco=float(preco), tipo=tipo_chave)
+    bebida = Bebida(nome=nome, endImg=endImg, preco=float(price), tipo=tipo_chave)
     bebida.put()
     return RedirectResponse(router.to_path(exibir, bebida_tipo_id))
 
-# Modelo e formulário
+# Modelo e formulario
 
 class Bebida(ndb.Model):
     nome = ndb.StringProperty(required=True)
     endImg = ndb.StringProperty(required=True)
-    preco = ndb.FloatProperty(required=True)
+    price = ndb.FloatProperty(required=True)
     tipo = ndb.KeyProperty(BebidaTipo, required=True)

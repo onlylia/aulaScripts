@@ -30,4 +30,20 @@ indexes:
 - kind: Node
   properties:
   - name: class
+  - name: descricao
+
+- kind: Node
+  properties:
+  - name: class
   - name: email
+
+- kind: Node
+  properties:
+  - name: class
+  - name: preco
+
+- kind: Node
+  properties:
+  - name: class
+  - name: preco
+    direction: desc
