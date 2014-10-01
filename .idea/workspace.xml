@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e7b43d5-63aa-4403-af72-3a497b61c678" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\apps\course_app\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\apps\course_app\commands.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\apps\course_app\facade.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\apps\course_app\model.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\apps\locale_app\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\apps\locale_app\middleware.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\apps\permission_app\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\apps\permission_app\model.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/bebidas.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/exibir.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/bebidas/form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/bebidas/admin/form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/bebidas/home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/bebidas/admin/home.html" />
+      <change type="DELETED" beforePath="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\routes\bebidaListas\__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\routes\bebidaListas\home.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\templates\bebidaListas\exibir.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\templates\bebidaListas\home.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tekton-master/backend/appengine/templates/base/base.html" afterPath="$PROJECT_DIR$/tekton-master/backend/appengine/templates/base/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tekton-master/backend/appengine/routes/bebidas.py" afterPath="$PROJECT_DIR$/tekton-master/backend/appengine/routes/bebidas.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/form.html" afterPath="$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/home.html" afterPath="$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tekton-master/backend/appengine/index.yaml" afterPath="$PROJECT_DIR$/tekton-master/backend/appengine/index.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="aulaScripts.iws" />
@@ -22,7 +29,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/aulaScripts$AppEngine.coverage" NAME="AppEngine Coverage Results" MODIFIED="1411955963815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tekton-master/backend/appengine" />
+    <SUITE FILE_PATH="coverage/aulaScripts$AppEngine.coverage" NAME="AppEngine Coverage Results" MODIFIED="1412127353302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tekton-master/backend/appengine" />
     <SUITE FILE_PATH="coverage/aulaScripts$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1409008861315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tekton-master/backend/appengine" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -40,21 +47,31 @@
       <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="833">
-              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+            <state vertical-scroll-proportion="-4.3461537" vertical-offset="856" max-vertical-offset="1173">
+              <caret line="57" column="101" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="101" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bebidas.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="bebidas.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/routes/bebidas.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7456359" vertical-offset="993" max-vertical-offset="1683">
-              <caret line="76" column="20" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2223" max-vertical-offset="2567">
+              <caret line="145" column="54" selection-start-line="145" selection-start-column="54" selection-end-line="145" selection-end-column="54" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exibir.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/exibir.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.90365446" vertical-offset="204" max-vertical-offset="578">
+              <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -85,17 +102,21 @@
         <option value="$PROJECT_DIR$/tekton-master/backend/appengine/lib/gaepermission/model.py" />
         <option value="$PROJECT_DIR$/tekton-master/backend/appengine/app.yaml" />
         <option value="$PROJECT_DIR$/tekton-master/backend/venv/requirements.txt" />
-        <option value="$PROJECT_DIR$/tekton-master/backend/appengine/templates/base/base.html" />
         <option value="$PROJECT_DIR$/tekton-master/backend/appengine/routes/bebidaListas/__init__.py" />
         <option value="$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidaTipos/home.html" />
-        <option value="$PROJECT_DIR$/tekton-master/backend/appengine/routes/bebidaTipos/home.py" />
         <option value="$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidaListas/home.html" />
         <option value="$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidaListas/exibir.html" />
         <option value="$PROJECT_DIR$/tekton-master/backend/appengine/routes/bebidaListas/home.py" />
-        <option value="$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/form.html" />
         <option value="$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/admin/home.html" />
+        <option value="$PROJECT_DIR$/tekton-master/backend/appengine/routes/backup/bebidas.py" />
+        <option value="$PROJECT_DIR$/tekton-master/backend/appengine/routes/bebidaTipos/home.py" />
+        <option value="$PROJECT_DIR$/tekton-master/backend/appengine/apps/bebidaTipo_app/commands.py" />
+        <option value="$PROJECT_DIR$/tekton-master/backend/appengine/apps/bebidaTipo_app/model.py" />
+        <option value="$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/form.html" />
         <option value="$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/home.html" />
+        <option value="$PROJECT_DIR$/tekton-master/backend/appengine/templates/base/base.html" />
         <option value="$PROJECT_DIR$/tekton-master/backend/appengine/routes/bebidas.py" />
+        <option value="$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/exibir.html" />
       </list>
     </option>
   </component>
@@ -131,7 +152,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -260,68 +280,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aulaScripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aulaScripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tekton-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bebidas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aulaScripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aulaScripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tekton-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appengine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -336,6 +297,7 @@
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="LayoutCode.rearrangeEntriesPython" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="exibir.html&#9;FILE&#9;file://C:/Users/User/Documents/GitHub/aulaScripts/tekton-master/backend/appengine/templates/bebidas/exibir.html" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -344,11 +306,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\GitHub\aulaScripts\backup" />
+      <recent name="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\routes\backup" />
+      <recent name="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\templates\backup" />
       <recent name="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\routes" />
       <recent name="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\templates\bebidas\admin" />
-      <recent name="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\templates\bebidas" />
-      <recent name="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\templates\base" />
-      <recent name="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\static\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\Documents\GitHub\aulaScripts\tekton-master\backend\appengine\routes\bebidas" />
@@ -618,29 +580,33 @@
       <created>1411957626849</created>
       <updated>1411957626849</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Videos 14 a 17 - CRUD">
+      <created>1411958124170</created>
+      <updated>1411958124170</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33709678" sideWeight="0.49925038" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.336478" sideWeight="0.49853587" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20717423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32861635" sideWeight="0.8228404" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18960468" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44496855" sideWeight="0.66837484" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32861635" sideWeight="0.17715959" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44496855" sideWeight="0.3316252" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5695461" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23870967" sideWeight="0.4993789" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4371069" sideWeight="0.49926794" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -701,13 +667,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tekton-master/LICENSE">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.72" vertical-offset="93" max-vertical-offset="442">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tekton-master/README.md">
@@ -732,13 +698,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/lib/gaepermission/inspector.py">
@@ -818,24 +784,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/routes/home.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="417">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/Google/google_appengine/google/appengine/tools/devappserver2/module.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="21302" max-vertical-offset="43486">
           <caret line="1292" column="0" selection-start-line="1292" selection-start-column="0" selection-end-line="1292" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/routes/bebidaListas/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.064150944" vertical-offset="0" max-vertical-offset="265">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -867,27 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/apps/bebidaTipo_app/commands.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/apps/bebidaTipo_app/facade.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.007936508" vertical-offset="2" max-vertical-offset="1394">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/apps/bebidaTipo_app/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44150943" vertical-offset="2" max-vertical-offset="289">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidaTipos/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21338913" vertical-offset="0" max-vertical-offset="239">
@@ -910,20 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/routes/bebidaTipos/home.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5164557" vertical-offset="0" max-vertical-offset="395">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5337079" vertical-offset="1854" max-vertical-offset="2210">
-          <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidaTipos/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6910569" vertical-offset="306" max-vertical-offset="1938">
@@ -931,59 +848,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/routes/bebidaListas/home.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tekton-master/backend/venv/Lib/site-packages/gaeforms/ndb/form.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.3990025" vertical-offset="1520" max-vertical-offset="1921">
           <caret line="85" column="19" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/base/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2947977" vertical-offset="0" max-vertical-offset="2074">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidaListas/exibir.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.923077" vertical-offset="39" max-vertical-offset="612">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidaListas/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.576" vertical-offset="277" max-vertical-offset="1105">
-          <caret line="29" column="39" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/courses/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.408" vertical-offset="51" max-vertical-offset="748">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/courses/admin/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.307693" vertical-offset="335" max-vertical-offset="952">
-          <caret line="37" column="55" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -991,7 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.408" vertical-offset="0" max-vertical-offset="544">
           <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -999,7 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,7 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="41" max-vertical-offset="442">
           <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1015,15 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46633416" vertical-offset="0" max-vertical-offset="401">
           <caret line="17" column="79" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68" vertical-offset="0" max-vertical-offset="544">
-          <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1031,25 +887,144 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2630058" vertical-offset="351" max-vertical-offset="952">
           <caret line="26" column="58" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/courses/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.576923" vertical-offset="322" max-vertical-offset="748">
+          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/courses/admin/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.730769" vertical-offset="539" max-vertical-offset="952">
+          <caret line="42" column="33" selection-start-line="36" selection-start-column="28" selection-end-line="42" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/apps/bebidaTipo_app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="386">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/routes/home.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/routes/bebidaTipos/home.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.368" vertical-offset="44" max-vertical-offset="476">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backup/bebidas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/home.html">
+    <entry file="file://$PROJECT_DIR$/backup/bebidas/admin/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="833">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="544">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Google/google_appengine/gaeforms/ndb/form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="520" max-vertical-offset="1921">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/apps/bebidaTipo_app/commands.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1003">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/apps/bebidaTipo_app/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6238532" vertical-offset="0" max-vertical-offset="327">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/apps/bebidaTipo_app/facade.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.675841" vertical-offset="0" max-vertical-offset="1343">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1153846" vertical-offset="175" max-vertical-offset="680">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="34.692307" vertical-offset="1854" max-vertical-offset="2210">
+          <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/base/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73421925" vertical-offset="1020" max-vertical-offset="2091">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/routes/bebidas.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7456359" vertical-offset="993" max-vertical-offset="1683">
-          <caret line="76" column="20" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2223" max-vertical-offset="2567">
+          <caret line="145" column="54" selection-start-line="145" selection-start-column="54" selection-end-line="145" selection-end-column="54" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.3461537" vertical-offset="856" max-vertical-offset="1173">
+          <caret line="57" column="101" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tekton-master/backend/appengine/templates/bebidas/exibir.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.90365446" vertical-offset="204" max-vertical-offset="578">
+          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

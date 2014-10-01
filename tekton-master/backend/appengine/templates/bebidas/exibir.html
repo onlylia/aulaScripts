@@ -3,28 +3,26 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center">{{ bebida_tipo.descricao }}</h1>
+                <h1 class="text-center">Lista de {{ tipo.descricao }}</h1>
 
                 <ol>
-                    {% for beb in lista_de_bebidas %}
-                        <li>{{ beb.nome }} - <strong> Preço: </strong> {{ beb.price }}</li>
+                    {% for bebida in lista_de_bebidas %}
+                        <li>{{ bebida.nome }} - <strong>Preço: </strong> R${{ bebida.preco }}</li>
                     {% endfor %}
                 </ol>
-
-
                 {% set bebida = bebida or None %}
                 {% set erros = erros or None %}
-
                 <div class="well">
                     <form action="{{ salvar_path }}" method="post">
                         {{ csrf_input() }}
-                        <input type="hidden" name="tipo_id" value="{{ bebida_tipo.key.id() }}"/>
+                        <input type="hidden" name="tipo_id" value="{{ tipo.key.id() }}"/>
                         {{ form_input('Nome','nome',bebida.nome,erros.nome) }}
-                        {{ form_input('Preco','preco',bebida.price,erros.price) }}
-                        {{ form_input('Endereço da imagem','endereço',bebida.endImg,erros.endImg) }}
+                        {{ form_input('Preço','preco',bebida.preco,erros.preco) }}
+                        {{ form_input('Endereço da imagem','endImg',bebida.endImg,erros.endImg) }}
                         <button type="submit" class="btn bg-primary">Salvar</button>
                     </form>
                 </div>
+                <a href="{{ return_path }}" class="btn btn-primary">Voltar</a>
             </div>
         </div>
     </div>

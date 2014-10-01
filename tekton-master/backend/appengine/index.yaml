@@ -47,3 +47,9 @@ indexes:
   - name: class
   - name: preco
     direction: desc
+
+- kind: Node
+  properties:
+  - name: class
+  - name: tipo
+  - name: preco
