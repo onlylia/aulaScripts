@@ -1,6 +1,7 @@
 {% extends 'base/base.html' %}
 {% block body %}
-    {% set bebida=bebida or None %}
+
+   <!-- {% set bebida=bebida or None %}
     {% set erros=erros or None %}
 
     <div class="container">
@@ -9,9 +10,9 @@
 
                 <h1>Bebidas</h1>
 
-                <!--{% if _logged_user and ('ADMIN' in _logged_user.groups) %}
+                {% if _logged_user and ('ADMIN' in _logged_user.groups) %}
                 <a href="{{ admin_path }}" class="btn btn-success">Admin</a>
-                {% endif %}-->
+                {% endif %}
 
                 <hr/>
                 <h2>Lista de Bebidas</h2>
@@ -45,6 +46,17 @@
                     {% endfor %}
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>-->
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Escolha um tipo de Bebida</h1>
+                {% for tipo in tipo_bebidas %}
+                    <a href="{{ tipo.exibir_path }}" class="btn btn-primary">{{ tipo.descricao }}</a>
+                {% endfor %}
             </div>
         </div>
     </div>

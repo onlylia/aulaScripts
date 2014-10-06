@@ -93,8 +93,6 @@ def editar(bebida_id, **propriedades):
         bebida.put()
         return RedirectResponse(router.to_path(index))
 
-
-
 #Index
 '''
 @login_not_required
@@ -137,6 +135,13 @@ def exibir(tipo_id):
     tipo = BebidaTipo.get_by_id(int(tipo_id))
     query = Bebida.query(Bebida.tipo == tipo.key).order(Bebida.preco)
     lista_de_bebidas = query.fetch()
+    form = BebidaForm()
+    lista_de_bebidas = [form.fill_with_model(bebida)for bebida in lista_de_bebidas]
+    edit_path = router.to_path(editar_form)
+    delete_path = router.to_path(deletar)
+    for bebida in lista_de_bebidas:
+        bebida['edit_path'] = '%s/%s'%(edit_path, bebida['id'])
+        bebida['delete_path'] = '%s/%s'%(delete_path, bebida['id'])
     contexto = {
         'lista_de_bebidas' : lista_de_bebidas,
         'tipo' : tipo,
@@ -144,3 +149,20 @@ def exibir(tipo_id):
         'return_path' : router.to_path(index)
     }
     return TemplateResponse(contexto, 'bebidas/exibir.html')
+
+'''
+@login_not_required
+@no_csrf
+def index():
+    query = Bebida.query().order(Bebida.preco)
+    bebida_lista = query.fetch()
+    form = BebidaForm()
+    bebida_lista = [form.fill_with_model(bebida)for bebida in bebida_lista]
+    edit_path = router.to_path(editar_form)
+    delete_path = router.to_path(deletar)
+    for bebida in bebida_lista:
+        bebida['edit_path'] = '%s/%s'%(edit_path, bebida['id'])
+        bebida['delete_path'] = '%s/%s'%(delete_path, bebida['id'])
+    contexto = { 'bebida_lista' : bebida_lista }
+    return TemplateResponse(contexto)
+'''

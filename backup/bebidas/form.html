@@ -16,6 +16,14 @@
                         {{ form_input(_('Nome'),'nome',bebida.nome,erros.nome) }}
                         {{ form_input('Preço','preco',bebida.preco,erros.preco) }}
                         {{ form_input('Endereço da imagem','endImg',bebida.endImg,erros.endImg) }}
+                        <!--{{ form_input('Tipo da bebida','tipo',bebida.tipo,erros.tipo) }}-->
+
+                        <!--<label>Tipo de bebida</label>
+                        <select name="tipo" value="bebida.tipo">
+                            {% for tipo in lista_tipos %}
+                                <option value="{{ tipo.key }}">{{ tipo.key }} - {{ tipo.descricao }}</option>
+                            {% endfor %}
+                        </select>-->
 
                         <button type="submit" class="btn btn-success">Salvar</button>
                     </form>
