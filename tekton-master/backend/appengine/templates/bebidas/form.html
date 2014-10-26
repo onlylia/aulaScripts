@@ -21,7 +21,7 @@
                         <!--<label>Tipo de bebida</label>
                         <select name="tipo" value="bebida.tipo">
                             {% for tipo in lista_tipos %}
-                                <option value="{{ tipo.key }}">{{ tipo.key }} - {{ tipo.descricao }}</option>
+                                <option value="{{ tipo.key }}">{{ tipo.key.id() }} - {{ tipo.descricao }}</option>
                             {% endfor %}
                         </select>-->
 

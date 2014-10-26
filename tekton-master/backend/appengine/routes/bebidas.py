@@ -26,7 +26,6 @@ class BebidaForm(ModelForm):
     _model_class = Bebida
     _include = [Bebida.nome, Bebida.preco, Bebida.endImg]
 
-
 """
 class BebidaForm(Form):
     nome = base.StringField(required=True)
