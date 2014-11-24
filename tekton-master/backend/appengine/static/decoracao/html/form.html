@@ -1,0 +1,30 @@
+<form class="well" ng-submit="salvar()">
+
+    <h1 class="text-center"> Decoracao Form </h1>
+
+    <div role="form">
+
+        <div id="endimgDiv" class="form-group" ng-class="{true:'has-error', false:''}[erros.endimg!=null">
+            <label for="endimgInput" class="control-label">Imagem</label>
+            <input id="endimgInput" type="text" class="form-control" ng-model="decoracao.endimg">
+            <span id="help-endimg" class="help-block">{{erros.endimg}}</span>
+        </div>
+
+        <div id="descricaoDiv" class="form-group" ng-class="{true:'has-error', false:''}[erros.descricao!=null">
+            <label for="descricaoInput" class="control-label">Descrição</label>
+            <input id="descricaoInput" type="text" class="form-control" ng-model="decoracao.descricao">
+            <span id="help-descricao" class="help-block">{{erros.descricao}}</span>
+        </div>
+
+         <div id="precoDiv" class="form-group" ng-class="{true:'has-error', false:''}[erros.preco!=null">
+            <label for="precoInput" class="control-label">Preço</label>
+            <input id="precoInput" type="text" class="form-control" ng-model="decoracao.preco">
+            <span id="help-preco" class="help-block">{{erros.preco}}</span>
+        </div>
+
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <img ng-show="executandoSalvamento" src="/static/img/ajax.gif">
+
+    </div>
+
+</form>

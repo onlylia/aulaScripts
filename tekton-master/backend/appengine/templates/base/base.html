@@ -66,7 +66,9 @@
 					<ul class="nav navbar-nav">
 					    {% macro select_tab(tab='') %}
                             <!--<li {{ 'class=active' if tab=='PRODUTOSS' }}><a href="/produtoss">{% trans %}Produtos{% endtrans %}</a></li>-->
+                            <li {{ 'class=active' if tab=='PRODUTOS' }}><a href="/produtos">{% trans %}Produtos{% endtrans %}</a></li>
                             <li {{ 'class=active' if tab=='BEBIDAS' }}><a href="/bebidas">{% trans %}Bebidas{% endtrans %}</a></li>
+                            <li {{ 'class=active' if tab=='DECORACAOS' }}><a href="/decoracaos">{% trans %}Decorações{% endtrans %}</a></li>
                             {% if _logged_user and 'ADMIN' in _logged_user.groups %}
                                 <li {{ 'class=active' if tab=='BEBIDATIPOS' }}><a href="/bebidaTipos">{% trans %}Tipos de Bebida{% endtrans %}</a></li>
                                 <li {{ 'class=active' if tab=='ADMIN' }}><a href="/admin">{% trans %}Admin{% endtrans %}</a></li>

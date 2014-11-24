@@ -1,4 +1,5 @@
 from __future__ import absolute_import, unicode_literals
+import json
 
 from google.appengine.ext import ndb
 from bebidaTipo_app.model import BebidaTipo
@@ -11,8 +12,8 @@ from gaecookie.decorator import no_csrf
 from gaegraph.model import Node
 from gaepermission.decorator import login_not_required
 from tekton import router
+from tekton.gae.middleware.json_middleware import JsonUnsecureResponse
 from tekton.gae.middleware.redirect import RedirectResponse
-
 
 #Classes
 class Bebida(Node):
@@ -25,14 +26,6 @@ class Bebida(Node):
 class BebidaForm(ModelForm):
     _model_class = Bebida
     _include = [Bebida.nome, Bebida.preco, Bebida.endImg]
-
-"""
-class BebidaForm(Form):
-    nome = base.StringField(required=True)
-    preco = base.FloatField(required=True)
-    endImg = base.StringField(required=True)
-    tipo = base.IntegerField(required=True)
-"""
 
 #Formularios
 @no_csrf
@@ -51,30 +44,22 @@ def editar_form(bebida_id):
     contexto = {'save_path': router.to_path(editar, bebida_id),'bebida' : bebida_form }
     return TemplateResponse(contexto, 'bebidas/form.html')
 
-
 #Salvar
-'''
-def salvar(_resp, **propriedades):
-    bebida_form = BebidaForm(**propriedades)
-    erros = bebida_form.validate()
-    if erros:
-        contexto = {'save_path': router.to_path(salvar), 'erros': erros, 'bebida': bebida_form}
-        return TemplateResponse(contexto, 'bebidas/form.html')
-    else:
-        #bebida = Bebida(nome=propriedades['nome'], preco=float(propriedades['preco']), endImg=propriedades['endImg'])
-        bebida = bebida_form.fill_model()
-        bebida.put()
-        #_resp.write(propriedades)
-        return RedirectResponse(router.to_path(index))
-'''
-
 @login_not_required
-def salvar(tipo_id, nome, preco, endImg):
-    tipo_chave = ndb.Key(BebidaTipo, int(tipo_id))
-    bebida = Bebida(nome=nome, preco=float(preco), endImg=endImg, tipo=tipo_chave)
-    bebida.put()
-    return RedirectResponse(router.to_path(exibir, tipo_id))
-
+@no_csrf
+def salvar (_resp, tipo, **bebidas_atbr):
+    tipo_chave = ndb.Key(BebidaTipo, int(tipo))
+    form = BebidaForm(**bebidas_atbr)
+    erros = form.validate()
+    if (erros):
+        _resp.status_code = 500
+        return JsonUnsecureResponse(erros)
+    else:
+        bebida = form.fill_model()
+        bebida.tipo = tipo_chave
+        bebida.put()
+        dct = form.fill_with_model(bebida)
+        return JsonUnsecureResponse(dct)
 
 #Editar
 def editar(bebida_id, **propriedades):
@@ -92,23 +77,6 @@ def editar(bebida_id, **propriedades):
         bebida.put()
         return RedirectResponse(router.to_path(index))
 
-#Index
-'''
-@login_not_required
-@no_csrf
-def index():
-    query = Bebida.query().order(Bebida.preco)
-    bebida_lista = query.fetch()
-    form = BebidaForm()
-    bebida_lista = [form.fill_with_model(bebida)for bebida in bebida_lista]
-    edit_path = router.to_path(editar_form)
-    delete_path = router.to_path(deletar)
-    for bebida in bebida_lista:
-        bebida['edit_path'] = '%s/%s'%(edit_path, bebida['id'])
-        bebida['delete_path'] = '%s/%s'%(delete_path, bebida['id'])
-    contexto = { 'bebida_lista' : bebida_lista }
-    return TemplateResponse(contexto)
-'''
 
 @no_csrf
 @login_not_required
@@ -139,15 +107,29 @@ def exibir(tipo_id):
     edit_path = router.to_path(editar_form)
     delete_path = router.to_path(deletar)
     for bebida in lista_de_bebidas:
-        bebida['edit_path'] = '%s/%s'%(edit_path, bebida['id'])
-        bebida['delete_path'] = '%s/%s'%(delete_path, bebida['id'])
+       bebida['edit_path'] = '%s/%s'%(edit_path, bebida['id'])
+       bebida['delete_path'] = '%s/%s'%(delete_path, bebida['id'])
     contexto = {
-        'lista_de_bebidas' : lista_de_bebidas,
-        'tipo' : tipo,
-        'salvar_path' : router.to_path(salvar),
+       'lista_de_bebidas' : lista_de_bebidas,
+       'tipo' : tipo,
+       'salvar_path' : router.to_path(salvar),
         'return_path' : router.to_path(index)
     }
+
     return TemplateResponse(contexto, 'bebidas/exibir.html')
+
+#Listagem de Bebidas no Json
+@login_not_required
+@no_csrf
+def listarJson(tipo_id):
+    tipo = BebidaTipo.get_by_id(int(tipo_id))
+    query = Bebida.query(Bebida.tipo == tipo.key).order(Bebida.preco)
+    lista_de_bebidas = query.fetch()
+    form = BebidaForm()
+    lista_de_bebidas = [form.fill_with_model(bebida)for bebida in lista_de_bebidas]
+    return JsonUnsecureResponse(lista_de_bebidas)
+
+
 
 '''
 @login_not_required
@@ -164,4 +146,78 @@ def index():
         bebida['delete_path'] = '%s/%s'%(delete_path, bebida['id'])
     contexto = { 'bebida_lista' : bebida_lista }
     return TemplateResponse(contexto)
+'''
+
+#Index
+'''
+@login_not_required
+@no_csrf
+def index():
+    query = Bebida.query().order(Bebida.preco)
+    bebida_lista = query.fetch()
+    form = BebidaForm()
+    bebida_lista = [form.fill_with_model(bebida)for bebida in bebida_lista]
+    edit_path = router.to_path(editar_form)
+    delete_path = router.to_path(deletar)
+    for bebida in bebida_lista:
+        bebida['edit_path'] = '%s/%s'%(edit_path, bebida['id'])
+        bebida['delete_path'] = '%s/%s'%(delete_path, bebida['id'])
+    contexto = { 'bebida_lista' : bebida_lista }
+    return TemplateResponse(contexto)
+'''
+
+#Salvar
+'''
+def salvar(_resp, **propriedades):
+    bebida_form = BebidaForm(**propriedades)
+    erros = bebida_form.validate()
+    if erros:
+        contexto = {'save_path': router.to_path(salvar), 'erros': erros, 'bebida': bebida_form}
+        return TemplateResponse(contexto, 'bebidas/form.html')
+    else:
+        #bebida = Bebida(nome=propriedades['nome'], preco=float(propriedades['preco']), endImg=propriedades['endImg'])
+        bebida = bebida_form.fill_model()
+        bebida.put()
+        #_resp.write(propriedades)
+        return RedirectResponse(router.to_path(index))
+'''
+
+'''@login_not_required
+def salvar(tipo_id, nome, preco, endImg):
+    tipo_chave = ndb.Key(BebidaTipo, int(tipo_id))
+    bebida = Bebida(nome=nome, preco=float(preco), endImg=endImg, tipo=tipo_chave)
+    bebida.put()
+    return RedirectResponse(router.to_path(exibir, tipo_id)'''
+
+
+"""
+class BebidaForm(Form):
+    nome = base.StringField(required=True)
+    preco = base.FloatField(required=True)
+    endImg = base.StringField(required=True)
+    tipo = base.IntegerField(required=True)
+"""
+
+'''#Listagem de Bebidas por tipo
+@login_not_required
+@no_csrf
+def exibir(tipo_id):
+    tipo = BebidaTipo.get_by_id(int(tipo_id))
+    query = Bebida.query(Bebida.tipo == tipo.key).order(Bebida.preco)
+    lista_de_bebidas = query.fetch()
+    form = BebidaForm()
+    lista_de_bebidas = [form.fill_with_model(bebida)for bebida in lista_de_bebidas]
+    edit_path = router.to_path(editar_form)
+    delete_path = router.to_path(deletar)
+    for bebida in lista_de_bebidas:
+       bebida['edit_path'] = '%s/%s'%(edit_path, bebida['id'])
+       bebida['delete_path'] = '%s/%s'%(delete_path, bebida['id'])
+    contexto = {
+       'lista_de_bebidas' : lista_de_bebidas,
+       'tipo' : tipo,
+       'salvar_path' : router.to_path(salvar),
+        'return_path' : router.to_path(index)
+    }
+
+    return TemplateResponse(contexto, 'bebidas/exibir.html')
 '''
